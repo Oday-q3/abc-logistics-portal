@@ -3,160 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABC Insurance Logistics Cloud Portal</title>
+  <title>Routing System for ABC Insurance SDN BHD</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #1f2937;
+      background: #f7f7f7;
+      color: #222;
     }
 
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 25px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    header p {
-      margin-top: 8px;
-      color: #cbd5e1;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
+    .page {
+      max-width: 1000px;
       margin: 30px auto;
+      background: white;
+      border: 1px solid #d6d6d6;
+      padding: 28px;
     }
 
-    .status {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
+    .top {
+      border-bottom: 2px solid #222;
+      padding-bottom: 15px;
       margin-bottom: 25px;
-      border-left: 6px solid #16a34a;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
-    .status strong {
-      color: #16a34a;
+    h1 {
+      margin: 0;
+      font-size: 26px;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+    .status-box {
+      border: 1px solid #cfcfcf;
+      background: #fafafa;
+      padding: 15px;
+      margin-bottom: 22px;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #334155;
-      font-size: 17px;
-    }
-
-    .number {
-      font-size: 32px;
+    .online {
+      color: #0a7a2f;
       font-weight: bold;
-      color: #dc2626;
-      margin: 10px 0;
     }
 
-    .branch-list {
+    h2 {
+      font-size: 19px;
       margin-top: 25px;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 7px;
     }
 
-    .branches span {
-      display: inline-block;
-      background: #e2e8f0;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 20px;
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .summary div {
+      border: 1px solid #d4d4d4;
+      padding: 12px;
+      background: #fcfcfc;
+    }
+
+    .summary strong {
+      display: block;
+      font-size: 22px;
+      margin-top: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
       font-size: 14px;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 35px;
-      padding: 20px;
-      color: #64748b;
-      font-size: 14px;
+    th, td {
+      border: 1px solid #cfcfcf;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #efefef;
+    }
+
+    p {
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    @media (max-width: 750px) {
+      .summary {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>ABC Insurance Logistics Cloud Portal</h1>
-  <p>Cloud-Based Logistics and Document Routing System</p>
-</header>
+  <div class="page">
+    <div class="top">
+      <h1>Routing System for ABC Insurance SDN BHD</h1>
+    </div>
 
-<div class="container">
+    <div class="status-box">
+      <strong>Service Status:</strong>
+      <span class="online">Online</span>
+      <br>
+      This page is hosted online using GitHub Pages.
+    </div>
 
-  <div class="status">
-    <h2>System Status: <strong>Online</strong></h2>
-    <p>The cloud service is running and accessible through a public URL.</p>
+    <h2>Daily Document Summary</h2>
+    <div class="summary">
+      <div>
+        Incoming documents
+        <strong>124</strong>
+      </div>
+      <div>
+        Digitized files
+        <strong>89</strong>
+      </div>
+      <div>
+        Pending routing
+        <strong>35</strong>
+      </div>
+      <div>
+        Active branches
+        <strong>6</strong>
+      </div>
+    </div>
+
+    <h2>Sample Routing Queue</h2>
+    <table>
+      <tr>
+        <th>Document Type</th>
+        <th>Received Branch</th>
+        <th>Assigned Department</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Medical bill</td>
+        <td>Sabah</td>
+        <td>Claims Department</td>
+        <td>Digitized</td>
+      </tr>
+      <tr>
+        <td>Police report</td>
+        <td>Johor</td>
+        <td>Vehicle Insurance</td>
+        <td>Pending review</td>
+      </tr>
+      <tr>
+        <td>Signed policy</td>
+        <td>Penang</td>
+        <td>Insurance Operations</td>
+        <td>Routed</td>
+      </tr>
+      <tr>
+        <td>Physical mail</td>
+        <td>Kuala Lumpur HQ</td>
+        <td>Human Resource</td>
+        <td>Received</td>
+      </tr>
+    </table>
+
+    <h2>Branches Included</h2>
+    <table>
+      <tr>
+        <th>Main Office</th>
+        <th>Regional Branches</th>
+      </tr>
+      <tr>
+        <td>Kuala Lumpur HQ</td>
+        <td>Terengganu, Johor, Penang, Sabah, Sarawak</td>
+      </tr>
+    </table>
+
+    <h2>Big Data / Hadoop Use</h2>
+    <p>
+      The records from this page, such as document type, branch name, and routing status,
+      can later be used for Hadoop analysis. This would help ABC Insurance see which
+      branches receive more documents, where delays happen, and which departments may
+      need more support.
+    </p>
   </div>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Incoming Physical Documents</h3>
-      <div class="number">124</div>
-      <p>Mail, signed policies, bills, and claim evidence received.</p>
-    </div>
-
-    <div class="card">
-      <h3>Digitized Documents</h3>
-      <div class="number">89</div>
-      <p>Documents scanned and stored in cloud storage.</p>
-    </div>
-
-    <div class="card">
-      <h3>Pending Routing</h3>
-      <div class="number">35</div>
-      <p>Documents waiting to be sent to the correct branch or department.</p>
-    </div>
-
-    <div class="card">
-      <h3>Hadoop Analytics</h3>
-      <div class="number">Ready</div>
-      <p>Document volume and routing data ready for analysis.</p>
-    </div>
-  </div>
-
-  <div class="branch-list">
-    <h3>Active Branches</h3>
-    <div class="branches">
-      <span>Kuala Lumpur HQ</span>
-      <span>Terengganu</span>
-      <span>Johor</span>
-      <span>Penang</span>
-      <span>Sabah</span>
-      <span>Sarawak</span>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  SWE309 Introduction of Cloud Computing | Practical Cloud Deployment Demo
-</footer>
 
 </body>
 </html>
